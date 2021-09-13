@@ -1,0 +1,27 @@
+@import '../../../assets/styles/variables.scss';
+.wrapper-login-page {
+	background: $bg-color-page;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.row {
+		.wrapper-login-form {
+			background: #fff;
+			padding: 40px 40px;
+            border-radius: 5px;
+            height: 310px;
+            width: 200px;
+		}
+		.welcome-form {
+			background: #321fdb;
+            height: 310px;
+            color: #fff;
+			padding: 40px 20px;
+            text-align: center;
+            h1{
+                color: #fff;
+            }
+		}
+	}
+}

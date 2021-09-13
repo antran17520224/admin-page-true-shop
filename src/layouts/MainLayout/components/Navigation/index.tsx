@@ -8,7 +8,9 @@ import { IMainLayoutProps } from '../../model/IMainLayoutProps';
 import { Menu } from 'antd';
 import logo from '../../../../assets/images/logo/logo.png';
 import {
+	AppstoreOutlined,
 	DashboardOutlined,
+	MailOutlined,
 	MenuFoldOutlined,
 	MenuUnfoldOutlined,
 	PieChartOutlined,
@@ -18,6 +20,8 @@ import {
 } from '@ant-design/icons';
 //style
 import './index.scss';
+import SubMenu from 'antd/lib/menu/SubMenu';
+import { useTranslation } from "react-i18next";
 
 interface IMenuItem {
 	key: string;
@@ -56,6 +60,8 @@ const menuList: IMenuItem[] = [
 export const NavigationBar: React.FC<IMainLayoutProps> = React.memo((props) => {
 	const { collapsed, closeNavigation } = props.store.MainLayout;
 	const { path } = useRouteMatch();
+	const { t } = useTranslation();
+
 	const renderMenuItem = () => {
 		return menuList.map((item) => {
 			return (
@@ -81,7 +87,7 @@ export const NavigationBar: React.FC<IMainLayoutProps> = React.memo((props) => {
 				)}
 			>
 				<img src={logo} alt="logo-trueshop" />
-				{!collapsed && <h2>TrueShop</h2>}
+				{!collapsed && <h2>{t('TrueShop')}</h2>}
 			</div>
 			<div className="menu-nav">
 				{/* <div className="title-list-menu">
@@ -96,6 +102,42 @@ export const NavigationBar: React.FC<IMainLayoutProps> = React.memo((props) => {
 					inlineCollapsed={collapsed}
 				>
 					{renderMenuItem()}
+					<SubMenu
+						key="sub1"
+						icon={<AppstoreOutlined />}
+						title="Navigation Two"
+					>
+						<Menu.Item key="5">Option 9</Menu.Item>
+						<Menu.Item key="6">Option 10</Menu.Item>
+						<SubMenu key="sub2" title="Submenu">
+							<Menu.Item key="7">Option 11</Menu.Item>
+							<Menu.Item key="8">Option 12</Menu.Item>
+						</SubMenu>
+					</SubMenu>
+					<SubMenu
+						key="sub3"
+						icon={<AppstoreOutlined />}
+						title="Navigation Two"
+					>
+						<Menu.Item key="9">Option 9</Menu.Item>
+						<Menu.Item key="10">Option 10</Menu.Item>
+						<SubMenu key="sub4" title="Submenu">
+							<Menu.Item key="11">Option 11</Menu.Item>
+							<Menu.Item key="12">Option 12</Menu.Item>
+						</SubMenu>
+					</SubMenu>
+					<SubMenu
+						key="sub5"
+						icon={<AppstoreOutlined />}
+						title="Navigation Two"
+					>
+						<Menu.Item key="13">Option 9</Menu.Item>
+						<Menu.Item key="14">Option 10</Menu.Item>
+						<SubMenu key="sub6" title="Submenu">
+							<Menu.Item key="15">Option 11</Menu.Item>
+							<Menu.Item key="16">Option 12</Menu.Item>
+						</SubMenu>
+					</SubMenu>
 				</Menu>
 			</div>
 			<div

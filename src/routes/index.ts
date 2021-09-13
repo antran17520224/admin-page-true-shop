@@ -1,18 +1,19 @@
 import React, {
 	ComponentClass,
 	FunctionComponent,
-	LazyExoticComponent
+	LazyExoticComponent,
 } from 'react';
 import Content1 from '../modules/Content1';
 import Content2 from '../modules/Content2';
 import Content3 from '../modules/Content3';
 import { routeName } from './routes-name';
 
-
 const MainLayout = React.lazy(
 	() => import('./../layouts/MainLayout/components/MainLayoutContainer')
 );
-
+const LoginPage = React.lazy(
+	() => import('../modules/LoginPage/components/LoginPageContainer')
+);
 export interface RouteConfig {
 	path: string;
 	exact: boolean;
@@ -24,11 +25,11 @@ export interface RouteConfig {
 }
 
 export const authRoutes: RouteConfig[] = [
-	// 	{
-	// 		path: routeName.login,
-	// 		exact: true,
-	// 		component: LoginPage,
-	// 	},
+	{
+		path: routeName.login,
+		exact: true,
+		component: LoginPage,
+	},
 ];
 
 export const mainRoutes: RouteConfig[] = [

@@ -11,17 +11,19 @@ interface IProps {
 export const AuthLayout: React.FC<IProps> = (props) => {
 	return (
 		<React.Fragment>
-			<Content>
-				<Switch>
-					{props.routes.map((item: { path: string; component: any }) => (
-						<Route key={item.path} path={item.path} component={item.component} />
-					))}
+			<Switch>
+				{props.routes.map((item: { path: string; component: any }) => (
+					<Route
+						key={item.path}
+						path={item.path}
+						component={item.component}
+					/>
+				))}
 
-					{props.routes.length > 0 ? <Redirect to={props.routes[0].path} /> : null}
-				</Switch>
+				<Redirect to={props.routes[0].path} />
+			</Switch>
 
-				{props.children}
-			</Content>
+			{props.children}
 		</React.Fragment>
 	);
 };
