@@ -1,9 +1,9 @@
-import { call, put, takeEvery, delay } from 'redux-saga/effects';
-import * as actions from '../actions';
-import Keys from '../actionTypeKeys';
-import * as AuthApi from '../../../api/auth';
+// import { call, put, takeEvery, delay } from 'redux-saga/effects';
+// import * as actions from '../actions';
+// import Keys from '../actionTypeKeys';
+// import * as AuthApi from '../../../api/auth';
 
-import { message } from 'antd';
+// import { message } from 'antd';
 // Handle Admin Login
 // function* handleAdminLog(action: any) {
 // 	try {

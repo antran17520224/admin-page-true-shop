@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Reducer } from 'redux';
 import Keys from './actionTypeKeys';
 import ActionTypes from './actionTypes';

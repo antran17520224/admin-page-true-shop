@@ -1,13 +1,19 @@
 import { ILogInState, name as LoginPageState } from './../../modules/LoginPage';
 
+import {
+	IDashboardLayoutState,
+	name as DashboardLayoutState,
+} from '../../layouts/DashboardLayout';
 
 import {
-	IMainLayoutState,
-	name as MainLayoutState,
-} from '../../layouts/MainLayout';
+	IAboutUsState,
+	name as AboutUstState,
+} from '../../modules/AboutUsPage';
+
 
 export default interface IStore {
 	[LoginPageState]: ILogInState;
-	[MainLayoutState]: IMainLayoutState;
+	[DashboardLayoutState]: IDashboardLayoutState;
+	[AboutUstState]: IAboutUsState;
 	router: any;
 }

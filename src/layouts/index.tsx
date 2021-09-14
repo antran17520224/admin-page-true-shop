@@ -1,2 +1,2 @@
 export * from "./AuthLayout/components/AuthLayout";
-export * from "./MainLayout/components/MainLayout";
+export * from "./DashboardLayout/components/DashboardLayout";

@@ -3,17 +3,21 @@ import React, {
 	FunctionComponent,
 	LazyExoticComponent,
 } from 'react';
-import Content1 from '../modules/Content1';
 import Content2 from '../modules/Content2';
 import Content3 from '../modules/Content3';
 import { routeName } from './routes-name';
 
-const MainLayout = React.lazy(
-	() => import('./../layouts/MainLayout/components/MainLayoutContainer')
+const DashboardLayout = React.lazy(
+	() => import('../layouts/DashboardLayout/components/DashboardLayoutContainer')
 );
 const LoginPage = React.lazy(
 	() => import('../modules/LoginPage/components/LoginPageContainer')
 );
+
+const AboutUsPage = React.lazy(
+	() => import('../modules/AboutUsPage/components/AboutUsPageContainer')
+);
+
 export interface RouteConfig {
 	path: string;
 	exact: boolean;
@@ -32,20 +36,20 @@ export const authRoutes: RouteConfig[] = [
 	},
 ];
 
-export const mainRoutes: RouteConfig[] = [
+export const dashboardRoutes: RouteConfig[] = [
 	{
 		path: routeName.dashboard,
 		exact: false,
-		component: MainLayout,
+		component: DashboardLayout,
 		permission: '',
 	},
 ];
 
 export const contentRoutes: RouteConfig[] = [
 	{
-		path: routeName.content1,
+		path: routeName.aboutUs,
 		exact: true,
-		component: Content1,
+		component: AboutUsPage,
 		permission: '',
 	},
 	{

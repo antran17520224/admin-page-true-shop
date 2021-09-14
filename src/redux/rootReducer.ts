@@ -8,16 +8,17 @@ import { History } from 'history';
 
 // Place for reducers' app
 import LoginPage, { name as nameOfLoginPage } from '../modules/LoginPage';
-import MainLayout, { name as nameOfMainLayout } from '../layouts/MainLayout';
+import DashboardLayout, { name as nameOfDashboardLayout } from '../layouts/DashboardLayout';
 
-// import UserPage, {
-// 	name as nameOfUserPage,
-// } from '../modules/UserPage';
+import AboutUsPage, {
+	name as nameOfAboutUsPage,
+} from '../modules/AboutUsPage';
 
 /*----Reducers List-----------------*/
 const reducers = {
-	[nameOfMainLayout]: MainLayout,
+	[nameOfDashboardLayout]: DashboardLayout,
 	[nameOfLoginPage]: LoginPage,
+	[nameOfAboutUsPage]: AboutUsPage,
 };
 
 const rootReducer = (history: History<any>) =>

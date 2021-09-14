@@ -7,7 +7,7 @@ import LoginForm from './Form';
 import './LoginPage.scss';
 interface IProps extends RouteComponentProps, ILogInProps {}
 
-export const LoginPage: React.FC<IProps> = (props) => {
+export const LoginPage: React.FC<IProps> = () => {
 	return (
 		<div className="wrapper-login-page">
 			<Row align="middle" justify="center" className="row">

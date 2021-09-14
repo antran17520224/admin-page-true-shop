@@ -5,14 +5,19 @@ import {
 } from '../../modules/LoginPage';
 
 import {
-	initialState as MainLayoutInitialState,
-	name as MainLayout,
-} from '../../layouts/MainLayout';
+	initialState as DashboardLayoutInitialState,
+	name as DashboardLayout,
+} from '../../layouts/DashboardLayout';
 
+import {
+	initialState as AboutUsInitialState,
+	name as AboutUs,
+} from '../../modules/AboutUsPage';
 
 export const initialState: IStore = {
 	[LoginPage]: LoginInitialState,
-	[MainLayout]: MainLayoutInitialState,
+	[DashboardLayout]: DashboardLayoutInitialState,
+	[AboutUs]: AboutUsInitialState,
 	router: null,
 };
 

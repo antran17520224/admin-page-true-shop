@@ -1,14 +1,14 @@
 //components
-import { Form, Input, Button, Checkbox } from 'antd';
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import { LockOutlined, UserOutlined } from '@ant-design/icons';
+import { Button, Form, Input } from 'antd';
 //styles
 import './index.scss';
 
 // interface IProps {}
 
-const LoginForm: React.FC = (props) => {
-	const onFinish = (values: any) => {
-		console.log('Received values of form: ', values);
+const LoginForm: React.FC = () => {
+	const onFinish = () => {
+		// console.log('Received values of form: ', values);
 	};
 	return (
 		<Form
