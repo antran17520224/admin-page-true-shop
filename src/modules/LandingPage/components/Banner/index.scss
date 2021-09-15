@@ -1,0 +1,89 @@
+@import '../../../../assets/styles/variables.scss';
+
+.wrapper-landing-page {
+	.wrapper-banner {
+		height: 100vh;
+		background: url('http://jthemes.org/html/reactjs/genius/assets/img/banner/s-4.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		position: relative;
+		color: #fff;
+		.wrapper-content {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			left: 0;
+			transform: translateY(-50%);
+			text-align: center;
+			color: #fff;
+			.subtitle {
+				color: #a9a3a3;
+				letter-spacing: 7px;
+				position: relative;
+				text-transform: uppercase;
+				&::before,
+				&::after {
+					content: '.';
+					font-size: 70px;
+					left: -45px;
+					pointer-events: none;
+					position: absolute;
+					text-shadow: rgba(0, 0, 0, 0%) 0px 0px;
+					top: -13px;
+					line-height: 0;
+					color: $main-color-true-shop;
+					text-shadow: 15px 0 $main-color-true-shop;
+				}
+				&::after {
+					right: -28px;
+					left: inherit;
+				}
+			}
+			.title {
+				color: #fff;
+				font-weight: 700;
+				font-size: 58px;
+				span {
+					font-weight: 100;
+				}
+			}
+			.scroll-down-top,
+			.scroll-down-bottom {
+				width: 40px;
+				height: 40px;
+				background-color: transparent;
+				z-index: 80;
+				position: absolute;
+				border-width: 0 0.2em 0.2em 0;
+				border-style: solid;
+				border-color: antiquewhite;
+				animation: scrolldown 1.2s ease-in-out infinite 0.15s;
+				left: 50%;
+				transform: translateY(0%) rotate(45deg);
+				opacity: 0;
+				cursor: pointer;
+			}
+			.scroll-down-top {
+				bottom: -160px;
+			}
+			.scroll-down-bottom {
+				bottom: -185px;
+			}
+			@keyframes scrolldown {
+				0% {
+					transform: translateY(20%) rotate(45deg);
+					opacity: 0.7;
+				}
+				50% {
+					transform: translateY(0%) rotate(45deg);
+					opacity: 0.2;
+				}
+				100% {
+					transform: translateY(20%) rotate(45deg);
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}

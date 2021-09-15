@@ -1,7 +1,20 @@
 {
-    "_comment" : "Name APP",
-    "TrueShop" : "Tieng Viet",
+    "_comment_dashboard": "DASHBOARD PAGE - HEADER",
+
     "_dashboard" : "Bảng điều khiển",
     "_user" : "Người dùng",
-    "_setting" : "Cài đặt"
+    "_setting" : "Cài đặt",
+
+    "_comment_landing-page": "LANDING PAGE - HEADER",
+	"_home": "Trang chủ",
+	"_about_us": "Về chúng tôi",
+	"_shop": "Danh sách cửa hàng",
+	"_news": "Tin kinh tế",
+	"_contact": "Liên hệ",
+	"_login": "Đăng nhập",
+	"_giaiphap" : "giải pháp cho cửa hàng & nhà phân phối",
+	"_inventive" : "Phát minh",
+	"_solution" : "những giải pháp",
+	"_store_management" : "quản lý cửa hàng",
+	"_for" : "cho"
 }

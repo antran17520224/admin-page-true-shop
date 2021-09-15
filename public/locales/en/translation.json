@@ -1,8 +1,20 @@
 {
-    "_comment" : "Name APP",
-    "TrueShop" : "Tieng Anh",
-    "_dashboard" : "Dashboard",
-    "_user" : "User",
-    "_setting" : "Setting"
-    
+	"_comment_dashboard": "DASHBOARD PAGE",
+
+	"_dashboard": "Dashboard",
+	"_user": "User",
+	"_setting": "Setting",
+
+    "_comment_landing-page": "LANDING PAGE",
+	"_home": "Home",
+	"_about_us": "About Us",
+	"_shop": "Shop",
+	"_news": "News",
+	"_contact": "Contact",
+	"_login": "Login",
+	"_giaiphap" : "education & training organization",
+	"_inventive" : "Inventive",
+	"_solution" : "Solution",
+	"_store_management" : "Store Management",
+	"_for" : "For"
 }
