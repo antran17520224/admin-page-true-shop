@@ -67,6 +67,7 @@
 					position: relative;
 					.search-body {
 						width: max-content;
+                        background: #313131;
 						top: 59px;
 						right: -25px;
 						opacity: 0;
@@ -74,7 +75,6 @@
 						z-index: 999;
 						padding: 10px 15px;
 						position: absolute;
-						background: transparent;
 						box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.1);
 						border: 3px solid $main-color-true-shop;
 						border-radius: 40px;
@@ -108,17 +108,6 @@
                                 border-right: 14px solid transparent;
                                 border-bottom: 14px solid $main-color-true-shop;
                             }
-							// .icon-caret {
-							// 	position: absolute;
-							// 	top: 0;
-							// 	right: 0;
-							// 	// i {
-							// 	// 	border: none;
-                            //     //     color: $main-color-true-shop;
-                            //     //     font-size: 40px;
-                            //     //     padding: 0px;
-							// 	// }
-							// }
 						}
 					}
 					.search-open {
