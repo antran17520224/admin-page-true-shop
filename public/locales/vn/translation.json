@@ -9,12 +9,20 @@
 	"_home": "Trang chủ",
 	"_about_us": "Về chúng tôi",
 	"_shop": "Danh sách cửa hàng",
-	"_news": "Tin kinh tế",
+	"_news": "Tin tức",
+	"_company" : "Đối tác",
 	"_contact": "Liên hệ",
 	"_login": "Đăng nhập",
 	"_giaiphap" : "giải pháp cho cửa hàng & nhà phân phối",
 	"_inventive" : "Phát minh",
 	"_solution" : "những giải pháp",
 	"_store_management" : "quản lý cửa hàng",
-	"_for" : "cho"
+	"_for" : "cho",
+	"_economic_news": "Tin tức kinh tế",
+	"_domestic" : "Trong nước",
+	"_international" : "Quốc tế",
+	"_stock" : "Chứng khoán",
+	"_contact_us" : "Liên hệ",
+	"_get_in_touch" : "Kết nối với chúng tôi"
+
 }

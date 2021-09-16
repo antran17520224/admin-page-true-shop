@@ -1,5 +1,10 @@
 @import '../../../../assets/styles/variables.scss';
-
+.ant-dropdown {
+    .ant-dropdown-menu-item:hover{
+        background-color: $main-color-true-shop;
+        color: #fff;
+    }
+}
 .wrapper-landing-page {
 	.wrapper-header {
 		color: #fff;
@@ -8,12 +13,11 @@
 		width: 100%;
 		.header-scroll {
 			transition: 0.3s all ease-in-out;
-			justify-content: space-evenly;
-			padding: 15px 9%;
+			padding: 15px 11%;
 			background-color: #000;
 		}
 		.header {
-			padding: 50px 9%;
+			padding: 50px 11%;
 			justify-content: space-evenly;
 			transition: 0.3s all ease-in-out;
 		}
@@ -59,8 +63,13 @@
 						color: #777;
 					}
 				}
+                .ant-dropdown-menu-item:hover{
+                    background-color: $main-color-true-shop;
+                    color: #fff;
+                }
 			}
 			.navbar-menu {
+                margin-left: auto;
 				.search-icon {
 					margin-left: 40px;
 					padding: 0;
@@ -114,6 +123,11 @@
 						opacity: 1;
 						transition: all 0.2s ease;
 						.search-form {
+                            form{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
 							.search-input {
 								width: 300px;
 								transition: all 1s ease;

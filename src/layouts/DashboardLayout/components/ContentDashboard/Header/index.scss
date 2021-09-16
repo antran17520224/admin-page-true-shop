@@ -1,95 +1,100 @@
 // @import '../../../../../assets/styles/media.scss';
-.header{
-    top: 0;
-    right: 0;
-    position: sticky;
-    left: 0;
-    background: #fff;
-    .header_container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        flex-shrink: 0;
-        min-height: 56px;
-        align-items: center;
-        color: rgba(0, 0, 21, 0.5);
-        padding: 12px 20px;
-        border-bottom: 1px solid #d8dbe0;
-        .close-navigation {
-            font-size: 20px;
-        }
-        button:hover {
-            color: rgba(0, 0, 21, 0.8);
-        }
-        .menu-header {
-            margin-right: auto;
-            margin-left: 20px;
-            li {
-                display: inline;
-                padding: 0 20px;
-                a {
-                    font-size: 14px;
-                    line-height: 21px;
+.dashboard{
+    .wrapper-dashboard{
+        .header{
+            top: 0;
+            right: 0;
+            position: sticky;
+            left: 0;
+            background: #fff;
+            .header_container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                flex-shrink: 0;
+                min-height: 56px;
+                align-items: center;
+                color: rgba(0, 0, 21, 0.5);
+                padding: 12px 20px;
+                border-bottom: 1px solid #d8dbe0;
+                .close-navigation {
+                    font-size: 20px;
                 }
-                :hover {
+                button:hover {
                     color: rgba(0, 0, 21, 0.8);
                 }
-            }
-        }
-        .menu-header-right {
-            display: flex;
-            align-items: center;
-            li {
-                padding: 0 15px;
-                button {
-                    position: relative;
-                    line-height: 21px;
-                    .badge {
-                        position: absolute;
-                        top: -4px;
-                        right: -2px;
-                        width: 17px;
-                        height: 17px;
-                        font-size: 11px;
-                        font-weight: 700;
-                        color: #fff;
-                        border-radius: 50%;
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
-                    }
-                    .mail {
-                        background: #39f;
-                    }
-                    .noti {
-                        background: #e53553;
+                .menu-header {
+                    margin-right: auto;
+                    margin-left: 20px;
+                    li {
+                        display: inline;
+                        padding: 0 20px;
+                        a {
+                            font-size: 14px;
+                            line-height: 21px;
+                        }
+                        :hover {
+                            color: rgba(0, 0, 21, 0.8);
+                        }
                     }
                 }
-                .btn-account{
-                    img{
-                        width: 30px;
-                        height: 30px;
-                        margin: auto;
-                        border-radius: 50%;
-                        object-fit: cover;
+                .menu-header-right {
+                    display: flex;
+                    align-items: center;
+                    li {
+                        padding: 0 15px;
+                        button {
+                            position: relative;
+                            line-height: 21px;
+                            .badge {
+                                position: absolute;
+                                top: -4px;
+                                right: -2px;
+                                width: 17px;
+                                height: 17px;
+                                font-size: 11px;
+                                font-weight: 700;
+                                color: #fff;
+                                border-radius: 50%;
+                                align-items: center;
+                                display: flex;
+                                justify-content: center;
+                            }
+                            .mail {
+                                background: #39f;
+                            }
+                            .noti {
+                                background: #e53553;
+                            }
+                        }
+                        .btn-account{
+                            img{
+                                width: 30px;
+                                height: 30px;
+                                margin: auto;
+                                border-radius: 50%;
+                                object-fit: cover;
+                            }
+                        }
                     }
                 }
             }
+            .sub-header{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                flex-shrink: 0;
+                min-height: 40px;
+                align-items: center;
+                color: rgba(0, 0, 21, 0.5);
+                padding: 0px 28px;
+                border-bottom: 1px solid #d8dbe0;
+                .ant-breadcrumb{
+                    margin-right: auto;
+                }
+            }
         }
-    }
-    .sub-header{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        flex-shrink: 0;
-        min-height: 40px;
-        align-items: center;
-        color: rgba(0, 0, 21, 0.5);
-        padding: 0px 28px;
-        border-bottom: 1px solid #d8dbe0;
-        .ant-breadcrumb{
-            margin-right: auto;
-        }
+        
     }
 }
 

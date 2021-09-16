@@ -10,11 +10,20 @@
 	"_about_us": "About Us",
 	"_shop": "Shop",
 	"_news": "News",
+	"_company" : "Company",
 	"_contact": "Contact",
 	"_login": "Login",
 	"_giaiphap" : "education & training organization",
 	"_inventive" : "Inventive",
 	"_solution" : "Solution",
 	"_store_management" : "Store Management",
-	"_for" : "For"
+	"_for" : "For",
+	"_economic_news": "Economic News",
+	"_domestic" : "Domestic",
+	"_international" : "International",
+	"_stock" : "Stock",
+	"_contact_us" : "Contact Us",
+	"_get_in_touch" : "Get in touch"
+
+	
 }

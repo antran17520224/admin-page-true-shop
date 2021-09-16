@@ -1,20 +1,22 @@
 //library
-import i18next from 'i18next';
-import cookies from 'js-cookie';
-import React, { useEffect, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import cls from 'classnames';
 //components
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Menu } from 'antd';
+import cls from 'classnames';
+import i18next from 'i18next';
+import React, { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import smallLogo from '../../../../assets/images/logo/small-logo.png';
+import { ILandingPageProps } from '../../model/ILandingPageProps';
 //styles
 import './index.scss';
+//interface
+interface IProps extends ILandingPageProps {}
 
-const Header = () => {
-	const [currentLanguage, setCurrentLanguage] = useState<string>(cookies.get('i18next') || 'VN');
+const Header: React.FC<IProps> = (props) => {
 	const [triggerScroll, setTriggerScroll] = useState<boolean>(false);
 	const [openSearchBox, setOpenSearchBox] = useState<boolean>(false);
+	const { currentLanguage } = props.store.LandingPage;
 	const prevScrollY = useRef(0);
 	useEffect(() => {
 		const currentScrollY = window.scrollY;
@@ -36,7 +38,7 @@ const Header = () => {
 	const { t } = useTranslation();
 	const handleChangeLanguage = (str: string) => {
 		i18next.changeLanguage(str);
-		setCurrentLanguage(str);
+		props.actions.selectLanguage(str)
 	};
 
 	const menuLang = (
@@ -69,7 +71,11 @@ const Header = () => {
 				</div>
 				<div className="select-lang">
 					<Dropdown overlay={menuLang} trigger={['click']}>
-						<a className="ant-dropdown-link" onClick={(e) => e.preventDefault()}>
+						<a
+							style={{ textTransform: 'uppercase' }}
+							className="ant-dropdown-link"
+							onClick={(e) => e.preventDefault()}
+						>
 							{currentLanguage}
 							<DownOutlined />
 						</a>
@@ -81,13 +87,16 @@ const Header = () => {
 							<a href="#home">{t('_home')}</a>
 						</li>
 						<li>
-							<a href="#aboutUs">{t('_about_us')}</a>
+							<a href="#about-us">{t('_about_us')}</a>
 						</li>
 						<li>
 							<a href="#shops">{t('_shop')}</a>
 						</li>
 						<li>
 							<a href="#news">{t('_news')}</a>
+						</li>
+						<li>
+							<a href="#news">{t('_company')}</a>
 						</li>
 						<li>
 							<a href="#contact">{t('_contact')}</a>

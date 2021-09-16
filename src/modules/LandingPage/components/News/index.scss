@@ -1,0 +1,89 @@
+@import '../../../../assets/styles/variables.scss';
+.wrapper-landing-page {
+	.wrapper-list-news {
+		padding: 50px 11%;
+		background: #f3f3f3;
+		.subtitle {
+			margin-left: 46px;
+		}
+		.list-news {
+			display: flex;
+			margin-top: 58px;
+			.news-column {
+				flex: 30%;
+                padding: 0px 30px; 
+				.headline {
+					font-size: 38px;
+					color: #333;
+					font-weight: 300;
+					position: relative;
+					&::after {
+						position: absolute;
+						content: '';
+						bottom: -20px;
+						height: 2px;
+						width: 50px;
+						left: 0;
+						background-color: $main-color-true-shop;
+					}
+					span {
+						font-weight: 700;
+					}
+				}
+				.box-news-item {
+					margin-top: 65px;
+					display: flex;
+                    border-bottom: 1px solid #ccc;
+                    padding-bottom: 25px;
+                    align-items: center;
+					.image-news {
+                        width: 100%;
+                        img{
+                            width: 100%;
+                            margin: auto;
+                        }
+					}
+					.details-news {
+                        margin-left: 25px;
+                        max-width: 223px;
+						.title {
+							line-height: 22px;
+							height: 44px;
+							text-overflow: ellipsis;
+							overflow: hidden;
+							font-size: 18px;
+							color: #333;
+							font-weight: 700;
+							display: -webkit-box;
+							-webkit-line-clamp: 2;
+							-webkit-box-orient: vertical;
+                            margin-bottom: 10px;
+						}
+						.summary {
+							font-size: 14px;
+							font-weight: 400;
+							color: #545454;
+                            display: -webkit-box;
+							-webkit-line-clamp: 3;
+							-webkit-box-orient: vertical;
+                            text-overflow: ellipsis;
+							overflow: hidden;
+                            margin-bottom: 10px;
+						}
+						.date {
+							font-size: 14px;
+							font-weight: 400;
+							color: #989898;
+                            margin-bottom: 0px;
+                            i{
+                                margin-right: 10px;
+                            }
+
+
+						}
+					}
+				}
+			}
+		}
+	}
+}

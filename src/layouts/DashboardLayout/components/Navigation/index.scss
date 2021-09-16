@@ -103,71 +103,74 @@
 // 		display: block;
 // 	}
 // }
-.navigation {
-	transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-	background: #001529;
-	position: fixed;
-	height: 100vh;
-	width: 270px;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-	display: flex;
-	flex: 0 0 270px;
-	flex-direction: column;
-	.logo {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		padding-left: 20px;
-		min-height: 56px;
-		img {
-			width: 56px;
-			height: 56px;
-		}
-		h2 {
-			font-size: 28px;
-			color: #fff;
-			margin: 0;
-		}
-	}
-	.menu-nav {
-		li {
-			margin: 0;
-		}
-		.title-list-menu {
-			min-height: 49px;
-            color: #fff;
-            padding: 10px 20px;
-            span{
-                padding-right: 10px;
+.dashboard{
+    .navigation {
+        transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+        background: #001529;
+        position: fixed;
+        height: 100vh;
+        width: 270px;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        flex: 0 0 270px;
+        flex-direction: column;
+        .logo {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            min-height: 56px;
+            img {
+                width: 56px;
+                height: 56px;
             }
-		}
-	}
-	li {
-		margin: 0;
-		margin-bottom: 5px;
-	}
-	.wrapper-btn {
-		position: absolute;
-		bottom: 0;
-		border-top: 1.5px solid #00101f;
-		width: 100%;
-		padding: 0px 10px;
-		button {
-			margin: 7px 0;
-			color: #ffffff;
-			background: none;
-			border: none;
-			outline: none;
-		}
-	}
-
-	.ant-menu-dark.ant-menu-inline,
-	.ant-menu-dark.ant-menu-vertical,
-	.ant-menu-dark.ant-menu-vertical-left,
-	.ant-menu-dark.ant-menu-vertical-right {
-		width: 100%;
-	}
+            h2 {
+                font-size: 28px;
+                color: #fff;
+                margin: 0;
+            }
+        }
+        .menu-nav {
+            li {
+                margin: 0;
+            }
+            .title-list-menu {
+                min-height: 49px;
+                color: #fff;
+                padding: 10px 20px;
+                span{
+                    padding-right: 10px;
+                }
+            }
+        }
+        li {
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        .wrapper-btn {
+            position: absolute;
+            bottom: 0;
+            border-top: 1.5px solid #00101f;
+            width: 100%;
+            padding: 0px 10px;
+            button {
+                margin: 7px 0;
+                color: #ffffff;
+                background: none;
+                border: none;
+                outline: none;
+            }
+        }
+    
+        .ant-menu-dark.ant-menu-inline,
+        .ant-menu-dark.ant-menu-vertical,
+        .ant-menu-dark.ant-menu-vertical-left,
+        .ant-menu-dark.ant-menu-vertical-right {
+            width: 100%;
+        }
+    }
 }
+
 

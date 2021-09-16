@@ -1,0 +1,26 @@
+@import '../../../assets/styles/variables.scss';
+.wrapper-landing-page {
+	.subtitle {
+        color: #a9a3a3;
+        letter-spacing: 7px;
+        position: relative;
+        text-transform: uppercase;
+        &::before,
+        &::after {
+            content: '.';
+            font-size: 70px;
+            left: -45px;
+            pointer-events: none;
+            position: absolute;
+            text-shadow: rgba(0, 0, 0, 0%) 0px 0px;
+            top: -13px;
+            line-height: 0;
+            color: $main-color-true-shop;
+            text-shadow: 15px 0 $main-color-true-shop;
+        }
+        &::after {
+            right: -28px;
+            left: inherit;
+        }
+    }
+}

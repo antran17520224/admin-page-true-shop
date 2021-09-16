@@ -17,28 +17,7 @@
 			padding: 0px 20px;
 			color: #333;
 			.subtitle {
-				color: #a9a3a3;
-				letter-spacing: 7px;
-				position: relative;
-				text-transform: uppercase;
 				margin-left: 42px;
-				&::before,
-				&::after {
-					content: '.';
-					font-size: 70px;
-					left: -45px;
-					pointer-events: none;
-					position: absolute;
-					text-shadow: rgba(0, 0, 0, 0%) 0px 0px;
-					top: -13px;
-					line-height: 0;
-					color: $main-color-true-shop;
-					text-shadow: 15px 0 $main-color-true-shop;
-				}
-				&::after {
-					right: -28px;
-					left: inherit;
-				}
 			}
 			h1 {
 				font-size: 55px;
@@ -105,7 +84,7 @@
 					color-stop(51%, $main-color-true-shop),
 					color-stop(100%, #4eb3bf)
 				);
-				background: -webkit-linear-gradient(left, #fba33b 0%, $main-color-true-shop 51%, #0071b0 100%);
+				background: -webkit-linear-gradient(left, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
 				background: -o-linear-gradient(left, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
 				background: -ms-linear-gradient(left, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
 				background: linear-gradient(to right, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);

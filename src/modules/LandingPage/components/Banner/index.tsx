@@ -15,8 +15,10 @@ const Banner = () => {
 					</span>{' '}
 					{t('_store_management')}
 				</h2>
+				<a href="#about-us">
 				<div className="scroll-down-top"></div>
 				<div className="scroll-down-bottom"></div>
+				</a>
 			</div>
 		</div>
 	);

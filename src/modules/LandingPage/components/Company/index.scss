@@ -1,0 +1,60 @@
+@import '../../../../assets/styles/variables.scss';
+.wrapper-landing-page {
+	.wrapper-company {
+		padding: 50px 11%;
+		background: #f3f3f3;
+		.headline {
+			font-size: 38px;
+			color: #333;
+			font-weight: 700;
+			position: relative;
+			&::after {
+				position: absolute;
+				content: '';
+				bottom: -20px;
+				height: 2px;
+				width: 50px;
+				left: 0;
+				background-color: $main-color-true-shop;
+			}
+		}
+		.wrapper-slider {
+			margin-top: 90px;
+			position: relative;
+			.arrow {
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				text-align: center;
+				margin: 0 5px;
+				border-radius: 4px;
+				background-color: $main-color-true-shop;
+				color: #fff;
+				// user-select: none;
+				outline: none;
+				cursor: pointer;
+				position: absolute;
+				top: -110px;
+			}
+			.prev {
+				right: 100px;
+			}
+			.next {
+				right: 30px;
+			}
+            .box-image-company{
+                text-align: center;
+                border-left: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+                cursor: grabbing;
+                img{
+                    width: 170px;
+                    height: 98px;
+                    padding: 0px 20px;
+                  
+                  
+                }
+            }
+		}
+	}
+}

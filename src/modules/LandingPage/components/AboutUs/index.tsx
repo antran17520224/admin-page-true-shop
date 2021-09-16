@@ -4,7 +4,7 @@ import './index.scss';
 import appTrueShopImage from '../../../../assets/images/LandingPage/phone-app-true-shop.png';
 const AboutUs = () => {
 	return (
-		<div className="wrapper-about-us">
+		<div className="wrapper-about-us" id="about-us">
 			<div className="image-app-true-shop">
 				<img src={appTrueShopImage} alt="appTrueShopImage" />
 			</div>

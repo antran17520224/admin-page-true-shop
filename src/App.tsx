@@ -10,7 +10,7 @@ import {
 	Switch,
 } from 'react-router-dom';
 import { LoadingScreen } from './components';
-import LandingPage from './modules/LandingPage';
+import LandingPage from './modules/LandingPage/components/LandingPageContainer';
 import { ILogInState } from './modules/LoginPage';
 import IStore from './redux/store/IStore';
 import { dashboardRoutes } from './routes';
@@ -43,7 +43,6 @@ const App: React.FC<IProps> = () => {
 							/>
 							<Redirect from="*" to={dashboardRoutes[0].path} />
 						</Switch> */}
-						{/* <AuthLayout routes={authRoutes} /> */}
 						<LandingPage />
 					</React.Suspense>
 				</Router>
