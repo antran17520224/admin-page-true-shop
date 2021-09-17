@@ -1,9 +1,9 @@
 @import '../../../../assets/styles/variables.scss';
 .ant-dropdown {
-    .ant-dropdown-menu-item:hover{
-        background-color: $main-color-true-shop;
-        color: #fff;
-    }
+	.ant-dropdown-menu-item:hover {
+		background-color: $main-color-true-shop;
+		color: #fff;
+	}
 }
 .wrapper-landing-page {
 	.wrapper-header {
@@ -63,20 +63,28 @@
 						color: #777;
 					}
 				}
-                .ant-dropdown-menu-item:hover{
-                    background-color: $main-color-true-shop;
-                    color: #fff;
-                }
+				.ant-dropdown-menu-item:hover {
+					background-color: $main-color-true-shop;
+					color: #fff;
+				}
 			}
 			.navbar-menu {
-                margin-left: auto;
+				margin-left: auto;
+				ul {
+					padding: 0;
+					list-style: none;
+					margin: 0;
+					li {
+						display: inline;
+					}
+				}
 				.search-icon {
 					margin-left: 40px;
 					padding: 0;
 					position: relative;
 					.search-body {
 						width: max-content;
-                        background: #313131;
+						background: #313131;
 						top: 59px;
 						right: -25px;
 						opacity: 0;
@@ -106,28 +114,28 @@
 									float: right;
 								}
 							}
-                            &::after{
-                                position: absolute;
-                                content: "";
-                                top: -15px;
-                                right: 25px;
-                                width: 0;
-                                height: 0;
-                                border-left: 14px solid transparent;
-                                border-right: 14px solid transparent;
-                                border-bottom: 14px solid $main-color-true-shop;
-                            }
+							&::after {
+								position: absolute;
+								content: '';
+								top: -15px;
+								right: 25px;
+								width: 0;
+								height: 0;
+								border-left: 14px solid transparent;
+								border-right: 14px solid transparent;
+								border-bottom: 14px solid $main-color-true-shop;
+							}
 						}
 					}
 					.search-open {
 						opacity: 1;
 						transition: all 0.2s ease;
 						.search-form {
-                            form{
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            }
+							form {
+								display: flex;
+								justify-content: center;
+								align-items: center;
+							}
 							.search-input {
 								width: 300px;
 								transition: all 1s ease;

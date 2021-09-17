@@ -35,7 +35,7 @@ const Company = () => {
 	};
 
 	return (
-		<div className="wrapper-company">
+		<div className="wrapper-company" id="company">
 			<h4 className="headline">{t('_company')}</h4>
 			<div className="wrapper-slider">
 				<Slider {...settings}>

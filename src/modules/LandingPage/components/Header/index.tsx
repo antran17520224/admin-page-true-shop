@@ -84,19 +84,19 @@ const Header: React.FC<IProps> = (props) => {
 				<div className="navbar-menu">
 					<ul>
 						<li>
-							<a href="#home">{t('_home')}</a>
+							<a href="#">{t('_home')}</a>
 						</li>
 						<li>
 							<a href="#about-us">{t('_about_us')}</a>
 						</li>
 						<li>
-							<a href="#shops">{t('_shop')}</a>
+							<a href="#list-businesses">{t('_shop')}</a>
 						</li>
 						<li>
 							<a href="#news">{t('_news')}</a>
 						</li>
 						<li>
-							<a href="#news">{t('_company')}</a>
+							<a href="#company">{t('_company')}</a>
 						</li>
 						<li>
 							<a href="#contact">{t('_contact')}</a>

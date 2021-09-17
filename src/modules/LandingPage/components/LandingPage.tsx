@@ -4,6 +4,7 @@ import AboutUs from './AboutUs';
 import Banner from './Banner';
 import Company from './Company';
 import Contact from './Contact';
+import Footer from './Footer';
 import Header from './Header';
 import './LandingPage.scss';
 import ListBusinesses from './ListBusinesses';
@@ -27,6 +28,7 @@ const LandingPage: React.FC<IProps> = (props) => {
 			<News {...props} />
 			<Company />
 			<Contact />
+			<Footer />
 		</div>
 	);
 };

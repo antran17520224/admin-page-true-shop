@@ -3,7 +3,7 @@ import './index.scss';
 const Contact = () => {
 	const { t } = useTranslation();
 	return (
-		<div className="wrapper-contact">
+		<div className="wrapper-contact" id="contact">
 			<div className="wrapper-info-true-shop">
 				<span className="subtitle">{t('_contact_us')}</span>
 				<h3>{t('_get_in_touch')}</h3>

@@ -1,7 +1,6 @@
 @import '../../../../assets/styles/variables.scss';
 .wrapper-landing-page {
 	.wrapper-contact {
-		height: 100vh;
 		background-color: $main-color-true-shop;
 		padding: 100px 9%;
 		display: flex;
@@ -44,7 +43,7 @@
 					width: 100%;
 					margin-bottom: 15px;
 					padding-bottom: 15px;
-					border-bottom: 1px solid #207fba;
+					border-bottom: 1px solid #fff;
 					.icon {
 						height: 60px;
 						width: 60px;
@@ -61,7 +60,7 @@
 					}
 					.details {
 						p {
-							font-size: 20px;
+							font-size: 18px;
 							line-height: 28px;
 							font-weight: 500;
 							margin: 0;

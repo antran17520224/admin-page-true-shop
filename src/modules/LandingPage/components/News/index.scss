@@ -1,17 +1,17 @@
 @import '../../../../assets/styles/variables.scss';
 .wrapper-landing-page {
 	.wrapper-list-news {
-		padding: 50px 11%;
+		padding: 100px 11% 0px;
 		background: #f3f3f3;
 		.subtitle {
-			margin-left: 46px;
+			margin-left: 44px;
 		}
 		.list-news {
 			display: flex;
 			margin-top: 58px;
 			.news-column {
 				flex: 30%;
-                padding: 0px 30px; 
+                padding-right: 30px;
 				.headline {
 					font-size: 38px;
 					color: #333;
@@ -45,7 +45,7 @@
 					}
 					.details-news {
                         margin-left: 25px;
-                        max-width: 223px;
+                        max-width: 210px;
 						.title {
 							line-height: 22px;
 							height: 44px;

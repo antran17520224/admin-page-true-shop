@@ -10,11 +10,11 @@ const News: React.FC<IProps> = (props) => {
 	const { t } = useTranslation();
 	const { currentLanguage } = props.store.LandingPage;
 	return (
-		<div className="wrapper-list-news">
+		<div className="wrapper-list-news" id="news">
 			<span className="subtitle">{t('_news')} & {t('_company')}</span>
 			<div className="list-news">
 				<div className="news-column">
-					<h4 className={cls('headline', currentLanguage === 'vn' && 'fw700')}>
+					<h4 className={cls('headline', currentLanguage === 'vn' && 'fw400')}>
 						{t('_domestic')}
 						{currentLanguage === 'en' && <span> {t('_news')}</span>}
 					</h4>
@@ -59,7 +59,7 @@ const News: React.FC<IProps> = (props) => {
 					</div>
 				</div>
 				<div className="news-column">
-					<h4 className={cls('headline', currentLanguage === 'vn' && 'fw700')}>
+					<h4 className={cls('headline', currentLanguage === 'vn' && 'fw400')}>
 						{t('_international')}
 						{currentLanguage === 'en' && <span> {t('_news')}</span>}
 					</h4>
@@ -104,7 +104,7 @@ const News: React.FC<IProps> = (props) => {
 					</div>
 				</div>
 				<div className="news-column">
-					<h4 className={cls('headline', currentLanguage === 'vn' && 'fw700')}>
+					<h4 className={cls('headline', currentLanguage === 'vn' && 'fw400')}>
 						{t('_stock')}
 						{currentLanguage === 'en' && <span> {t('_news')}</span>}
 					</h4>

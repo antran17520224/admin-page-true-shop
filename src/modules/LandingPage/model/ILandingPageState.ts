@@ -10,7 +10,7 @@ export interface ILandingPageState {
 
 // InitialState
 export const initialState: ILandingPageState = {
-	currentLanguage: cookies.get('i18next'),
+	currentLanguage: cookies.get('i18next') || 'vn',
 	isLoading: false,
 	isProcessing: false,
 };

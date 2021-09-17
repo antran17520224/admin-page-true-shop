@@ -23,7 +23,14 @@
 	"_international" : "International",
 	"_stock" : "Stock",
 	"_contact_us" : "Contact Us",
-	"_get_in_touch" : "Get in touch"
+	"_get_in_touch" : "Get in touch",
+	"_setting_account" : "Setting Account",
+	"_login_register" : "Login & Register",
+	"_mobile_apps" : "Mobile Apps",
+	"_support" : "Support",
+	"_useful_link" : "Useful Link",
+	"_account_info" : "Account Info",
+	"_quick_contact" : "Quick Contact"
 
 	
 }

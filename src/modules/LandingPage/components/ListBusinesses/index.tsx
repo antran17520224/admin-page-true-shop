@@ -20,7 +20,7 @@ const ListBusinesses = () => {
 
 	return (
 		<>
-			<div className="wrapper-list-businesses">
+			<div className="wrapper-list-businesses" id="list-businesses">
 				<div className="list-businesses">
 					<span className="subtitle">Danh sách cửa hàng</span>
 

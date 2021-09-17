@@ -1,12 +1,12 @@
 @import '../../../../assets/styles/variables.scss';
 .wrapper-landing-page {
 	.wrapper-company {
-		padding: 50px 11%;
+		padding: 100px 11%;
 		background: #f3f3f3;
 		.headline {
 			font-size: 38px;
 			color: #333;
-			font-weight: 700;
+			font-weight: 400;
 			position: relative;
 			&::after {
 				position: absolute;
