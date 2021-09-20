@@ -85,7 +85,7 @@
 					.search-body {
 						width: max-content;
 						background: #313131;
-						top: 59px;
+						top: 56px;
 						right: -25px;
 						opacity: 0;
 						height: auto;
@@ -93,7 +93,7 @@
 						padding: 10px 15px;
 						position: absolute;
 						box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.1);
-						border: 3px solid $main-color-true-shop;
+						// border: 3px solid $main-color-true-shop;
 						border-radius: 40px;
 						transition: all 0.2s ease;
 						.search-form {
@@ -117,13 +117,14 @@
 							&::after {
 								position: absolute;
 								content: '';
-								top: -15px;
-								right: 25px;
+								top: -14px;
+								right: 28px;
 								width: 0;
 								height: 0;
 								border-left: 14px solid transparent;
 								border-right: 14px solid transparent;
 								border-bottom: 14px solid $main-color-true-shop;
+								// border-bottom: 14px solid #313131;
 							}
 						}
 					}

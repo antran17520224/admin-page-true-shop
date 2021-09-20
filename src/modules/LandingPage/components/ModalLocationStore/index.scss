@@ -1,0 +1,21 @@
+.wrapper-landing-page {
+	.modal-location-store {
+		.modal-content {
+			display: flex;
+			.map {
+				width: 50%;
+				padding: 10px;
+				box-shadow: -15px -10px 40px 5px rgba(0, 0, 0, 0.1);
+			}
+			.info-store {
+				width: 50%;
+				padding: 10px;
+                margin-left: 20px;
+				span {
+					font-weight: 500;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}

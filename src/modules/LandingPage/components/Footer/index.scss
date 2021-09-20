@@ -3,28 +3,31 @@
 .wrapper-landing-page {
 	.wrapper-footer {
 		padding: 100px 9% 0px 11%;
+		.middle-col {
+			margin-left: auto;
+		}
 		.copy-right-menu {
-            margin-top: 40px;
+			margin-top: 40px;
 			padding: 30px 0px;
-            border-top: 1px solid #ddd6d6;
-            font-size: 16px;
+			border-top: 1px solid #ddd6d6;
+			font-size: 16px;
 			p {
 				display: inline;
-                span{
-                    color: $main-color-true-shop;
-                    a:hover{
-                        color: $main-color-true-shop;;
-                    }
-                }
+				span {
+					color: $main-color-true-shop;
+					a:hover {
+						color: $main-color-true-shop;
+					}
+				}
 			}
 			.copy-right-menu-item {
 				margin: 0;
 				padding: 0;
 				float: right;
 				li {
-                    color: #989898;
+					color: #989898;
 					display: inline;
-                    margin-left: 30px;
+					margin-left: 30px;
 				}
 			}
 		}

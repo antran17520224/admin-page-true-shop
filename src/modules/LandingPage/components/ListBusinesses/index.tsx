@@ -6,9 +6,10 @@ import shop3 from '../../../../assets/images/LandingPage/shop/3.png';
 import shop4 from '../../../../assets/images/LandingPage/shop/4.jpg';
 import shop5 from '../../../../assets/images/LandingPage/shop/5.jpg';
 import shop6 from '../../../../assets/images/LandingPage/shop/6.png';
+import { ILandingPageProps } from '../../model/ILandingPageProps';
 import './index.scss';
 
-const ListBusinesses = () => {
+const ListBusinesses: React.FC<ILandingPageProps> = (props) => {
 	const listSort = (
 		<Menu>
 			<Menu.Item key="0">Name</Menu.Item>
@@ -48,7 +49,7 @@ const ListBusinesses = () => {
 										<span>Tạp hóa cô Nga</span>
 										<p>55 Trần Phú, Linh Trung, Thủ Đức, TP.HCM</p>
 									</div>
-									<div className="btn-modal-map">
+									<div className="btn-modal-map" onClick={() => props.actions.toggleModalLocationStore()}>
 										<i className="fas fa-map-marker-alt"></i>
 									</div>
 								</div>

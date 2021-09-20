@@ -1,0 +1,51 @@
+@import '../../../../../assets/styles/variables.scss';
+.wrapper-landing-page {
+	.wrapper-modal-login {
+		.modal-content {
+			.tabs {
+				.ant-tabs-content-holder {
+					.ant-tabs-tabpane {
+						.ant-form-item {
+							margin-top: 10px;
+							.ant-form-item-control-input-content {
+								color: #fff;
+								.register-form-button {
+									background-color: $main-color-true-shop;
+									font-weight: 500;
+									border: none;
+								}
+								input {
+									color: #000;
+									font-weight: 500;
+								}
+								#normal_register_username {
+									padding: 6px 17px;
+									font-size: 15px;
+									font-weight: 300;
+									border-radius: 6px;
+								}
+								#normal_register_password,#normal_register_confirm,#normal_register_phone {
+									font-size: 15px;
+									font-weight: 300;
+								}
+                                #normal_register_phone{
+                                    border-radius: 0px 6px 6px 0px;;
+                                }
+                                .ant-input-group-addon{
+                                    border-radius: 6px 0px 0px 6px;
+                                }
+								.ant-input-affix-wrapper {
+									padding: 6px 17px;
+									font-size: 15px;
+									font-weight: 300;
+									border-radius: 6px;
+								}
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

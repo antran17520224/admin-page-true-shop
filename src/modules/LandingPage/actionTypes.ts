@@ -4,8 +4,6 @@
 
 import * as IActions from './IActions';
 
-type ActionTypes =
-	| IActions.ISelectLanguage
-
+type ActionTypes = IActions.ISelectLanguage | IActions.IToggleModalLogin | IActions.IToggleModalLocationStore;
 
 export default ActionTypes;

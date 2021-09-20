@@ -13,5 +13,16 @@ export interface ISelectLanguage extends Action {
 		lang: string | undefined;
 	};
 }
+//#endregion
 
+//#region TOGGLE_MODAL_LOGIN
+export interface IToggleModalLogin extends Action {
+	readonly type: Keys.TOGGLE_MODAL_LOGIN;
+}
+//#endregion
+
+//#region TOGGLE_MODAL_LOCATION_STORE
+export interface IToggleModalLocationStore extends Action {
+	readonly type: Keys.TOGGLE_MODAL_LOCATION_STORE;
+}
 //#endregion

@@ -1,0 +1,58 @@
+@import '../../../../assets/styles/variables.scss';
+.wrapper-landing-page {
+	.wrapper-modal-login {
+		.ant-modal-content {
+			border-radius: 10px;
+			.ant-modal-body {
+				padding: 0;
+			}
+		}
+
+		.modal-content {
+			background: #27343e;
+			color: #fff !important;
+			padding: 50px 50px 20px;
+			border-radius: 5px;
+			.title-modal {
+				font-size: 24px;
+				line-height: 24px;
+				font-weight: 900;
+				img {
+					margin-right: 10px;
+					width: 50px;
+					height: 50px;
+					object-fit: cover;
+				}
+			}
+			p {
+				margin-top: 20px;
+				font-size: 18px;
+				line-height: 22px;
+			}
+			.tabs {
+				.ant-tabs-nav {
+					&::before {
+						border-bottom: none;
+					}
+					.ant-tabs-tab {
+						.ant-tabs-tab-btn {
+							color: #fff;
+							font-weight: 300;
+							font-size: 17px;
+						}
+					}
+					.ant-tabs-tab-active {
+						.ant-tabs-tab-btn {
+							color: #fff;
+							font-weight: 600;
+							font-size: 17px;
+						}
+					}
+					.ant-tabs-ink-bar {
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
+}

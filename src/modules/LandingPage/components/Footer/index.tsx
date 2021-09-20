@@ -28,7 +28,7 @@ const Footer = () => {
 						obcaecati quod enim quibusdam expedita dicta totam velit?
 					</p>
 				</Col>
-				<Col className="gutter-row" xl={10}  >
+				<Col className="gutter-row middle-col" xl={10}  >
 					<Row justify="center">
 						<Col span={12} className="col-useful">
 							<h4 className="headline">{t('_useful_link')}</h4>
@@ -141,7 +141,7 @@ const Footer = () => {
 				<ul className="copy-right-menu-item">
 					<li><a href="#">License</a></li>
 					<li><a href="#">Privacy & Policy</a></li>
-					<li><a href="">Term Of Service</a></li>
+					<li><a href="#">Term Of Service</a></li>
 				</ul>
 			</div>
 		</div>

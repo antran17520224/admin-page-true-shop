@@ -8,6 +8,8 @@ import Footer from './Footer';
 import Header from './Header';
 import './LandingPage.scss';
 import ListBusinesses from './ListBusinesses';
+import ModalLocationStore from './ModalLocationStore';
+import ModalLogin from './ModalLogin';
 import News from './News';
 
 interface IProps extends ILandingPageProps {}
@@ -24,11 +26,13 @@ const LandingPage: React.FC<IProps> = (props) => {
 			<Header {...props} />
 			<Banner />
 			<AboutUs />
-			<ListBusinesses />
+			<ListBusinesses {...props} />
 			<News {...props} />
 			<Company />
 			<Contact />
 			<Footer />
+			<ModalLogin {...props} />
+			<ModalLocationStore {...props} />
 		</div>
 	);
 };

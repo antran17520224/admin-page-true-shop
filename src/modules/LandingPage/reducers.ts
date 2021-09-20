@@ -14,7 +14,10 @@ export const reducer: Reducer<ILandingPageState, any> = (
 	switch (action.type) {
 		case Keys.SELECT_LANGUAGE:
 			return onSelectLanguage(state, action);
-	
+		case Keys.TOGGLE_MODAL_LOGIN:
+			return onToggleModalLogin(state, action);
+		case Keys.TOGGLE_MODAL_LOCATION_STORE:
+			return onToggleModalLocationStore(state, action);
 
 		default:
 			return state;
@@ -23,13 +26,32 @@ export const reducer: Reducer<ILandingPageState, any> = (
 
 // IActions: the interface of current action
 
+//#region SELECT_LANGUAGE
 const onSelectLanguage = (state: ILandingPageState, action: IActions.ISelectLanguage) => {
-	const {lang} = action.payload;
+	const { lang } = action.payload;
 	return {
 		...state,
-		currentLanguage  : lang
+		currentLanguage: lang,
 	};
 };
+//#endregion
 
+//#region TOGGLE_MODAL_LOGIN
+const onToggleModalLogin = (state: ILandingPageState, action: IActions.IToggleModalLogin) => {
+	const { toggleModalLogin } = state;
+	return {
+		...state,
+		toggleModalLogin: !toggleModalLogin,
+	};
+};
+//#endregion
 
-
+//#region TOGGLE_MODAL_LOCATION_STORE
+const onToggleModalLocationStore = (state: ILandingPageState, action: IActions.IToggleModalLocationStore) => {
+	const { toggleModalLocationStore } = state;
+	return {
+		...state,
+		toggleModalLocationStore: !toggleModalLocationStore,
+	};
+};
+//#endregion

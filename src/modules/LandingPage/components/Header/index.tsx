@@ -114,7 +114,7 @@ const Header: React.FC<IProps> = (props) => {
 								</div>
 							</div>
 						</li>
-						<li>
+						<li onClick={() => props.actions.toggleModalLogin()}>
 							<i className="fas fa-user"></i>
 						</li>
 					</ul>

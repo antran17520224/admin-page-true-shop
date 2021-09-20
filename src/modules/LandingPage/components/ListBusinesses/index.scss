@@ -9,7 +9,7 @@
 			margin-left: 56px;
 		}
 		.list-businesses {
-			flex: 75%;
+			width: 75%;
 			padding: 0px 13px;
 			height: min-content;
 			.dropdown-box {
@@ -48,7 +48,7 @@
 				flex-wrap: wrap;
 				.wrapper-item {
 					padding: 15px;
-					flex: 30%;
+					width: 33%;
 					.item {
 						background: #f1f1f3;
 						border-radius: 4px;
@@ -183,7 +183,7 @@
 		.category {
 			margin-top: 66px;
 			padding: 0px 20px;
-			flex: 25%;
+			width: 25%;
 			.title {
 				font-size: 30px;
 				line-height: 36px;
