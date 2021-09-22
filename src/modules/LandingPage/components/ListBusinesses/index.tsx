@@ -1,5 +1,5 @@
 import { DownOutlined } from '@ant-design/icons';
-import { Dropdown, Menu } from 'antd';
+import { Col, Dropdown, Menu, Row, Input } from 'antd';
 import shop1 from '../../../../assets/images/LandingPage/shop/1.png';
 import shop2 from '../../../../assets/images/LandingPage/shop/2.png';
 import shop3 from '../../../../assets/images/LandingPage/shop/3.png';
@@ -9,6 +9,8 @@ import shop6 from '../../../../assets/images/LandingPage/shop/6.png';
 import { ILandingPageProps } from '../../model/ILandingPageProps';
 import './index.scss';
 
+const { Search } = Input;
+
 const ListBusinesses: React.FC<ILandingPageProps> = (props) => {
 	const listSort = (
 		<Menu>
@@ -16,19 +18,49 @@ const ListBusinesses: React.FC<ILandingPageProps> = (props) => {
 			<Menu.Item key="1">Popularity</Menu.Item>
 			<Menu.Item key="2">Most Read</Menu.Item>
 			<Menu.Item key="3">Most View</Menu.Item>
+			<Menu.Item key="4">TP. Hồ Chí Minh</Menu.Item>
+			<Menu.Item key="5">Đồng Nai</Menu.Item>
+			<Menu.Item key="6">Vũng Tàu</Menu.Item>
+			<Menu.Item key="7">Nha Trang</Menu.Item>
 		</Menu>
 	);
 
+	const arrayShops = [shop1, shop2, shop3, shop4, shop5, shop6, shop1, shop2, shop3];
+	const renderShop = (arrayShops: string[]) => {
+		return arrayShops.map((shop, index) => {
+			return (
+				<Col xl={8} className="wrapper-item">
+					<div className="item">
+						<div className="image-item">
+							<img src={shop} alt="shop1" />
+						</div>
+						<div className="info-detail">
+							<div className="name-address">
+								<span>Tạp hóa cô Nga</span>
+								<p>55 Trần Phú, Linh Trung, Thủ Đức, TP.HCM</p>
+							</div>
+							<div className="btn-modal-map" onClick={() => props.actions.toggleModalLocationStore()}>
+								<i className="fas fa-map-marker-alt"></i>
+							</div>
+						</div>
+					</div>
+				</Col>
+			);
+		});
+	};
+	const onSearch = (value: any) => {
+		console.log(value);
+	};
 	return (
 		<>
 			<div className="wrapper-list-businesses" id="list-businesses">
 				<div className="list-businesses">
 					<span className="subtitle">Danh sách cửa hàng</span>
 
-					<div className="dropdown-box">
-						<span>Sort </span>
-						by
+					<div className="tools-box">
 						<div className="dropdown">
+							<span>Sort </span>
+							by
 							<Dropdown overlay={listSort} trigger={['click']} placement="bottomLeft">
 								<a className="ant-dropdown-link">
 									Popularity
@@ -36,106 +68,11 @@ const ListBusinesses: React.FC<ILandingPageProps> = (props) => {
 								</a>
 							</Dropdown>
 						</div>
-					</div>
-
-					<div className="list">
-						<div className="wrapper-item">
-							<div className="item">
-								<div className="image-item">
-									<img src={shop1} alt="shop1" />
-								</div>
-								<div className="info-detail">
-									<div className="name-address">
-										<span>Tạp hóa cô Nga</span>
-										<p>55 Trần Phú, Linh Trung, Thủ Đức, TP.HCM</p>
-									</div>
-									<div className="btn-modal-map" onClick={() => props.actions.toggleModalLocationStore()}>
-										<i className="fas fa-map-marker-alt"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="wrapper-item">
-							<div className="item">
-								<div className="image-item">
-									<img src={shop2} alt="shop1" />
-								</div>
-								<div className="info-detail">
-									<div className="name-address">
-										<span>Tạp hóa cô Nga</span>
-										<p>55 Trần Phú, Linh Trung, Thủ Đức, TP.HCM</p>
-									</div>
-									<div className="btn-modal-map">
-										<i className="fas fa-map-marker-alt"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="wrapper-item">
-							<div className="item">
-								<div className="image-item">
-									<img src={shop3} alt="shop1" />
-								</div>
-								<div className="info-detail">
-									<div className="name-address">
-										<span>Tạp hóa cô Nga</span>
-										<p>55 Trần Phú, Linh Trung, Thủ Đức, TP.HCM</p>
-									</div>
-									<div className="btn-modal-map">
-										<i className="fas fa-map-marker-alt"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="wrapper-item">
-							<div className="item">
-								<div className="image-item">
-									<img src={shop4} alt="shop1" />
-								</div>
-								<div className="info-detail">
-									<div className="name-address">
-										<span>Tạp hóa cô Nga</span>
-										<p>55 Trần Phú, Linh Trung, Thủ Đức, TP.HCM</p>
-									</div>
-									<div className="btn-modal-map">
-										<i className="fas fa-map-marker-alt"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="wrapper-item">
-							<div className="item">
-								<div className="image-item">
-									<img src={shop5} alt="shop1" />
-								</div>
-								<div className="info-detail">
-									<div className="name-address">
-										<span>Tạp hóa cô Nga</span>
-										<p>55 Trần Phú, Linh Trung, Thủ Đức, TP.HCM</p>
-									</div>
-									<div className="btn-modal-map">
-										<i className="fas fa-map-marker-alt"></i>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="wrapper-item">
-							<div className="item">
-								<div className="image-item">
-									<img src={shop6} alt="shop1" />
-								</div>
-								<div className="info-detail">
-									<div className="name-address">
-										<span>Tạp hóa cô Nga</span>
-										<p>55 Trần Phú, Linh Trung, Thủ Đức, TP.HCM</p>
-									</div>
-									<div className="btn-modal-map">
-										<i className="fas fa-map-marker-alt"></i>
-									</div>
-								</div>
-							</div>
+						<div className="search-box">
+							<Search placeholder="search..." onSearch={onSearch} enterButton  />
 						</div>
 					</div>
+					<Row className="list">{renderShop(arrayShops)}</Row>
 				</div>
 				<div className="category">
 					<span className="title">Categories.</span>

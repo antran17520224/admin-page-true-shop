@@ -2,14 +2,17 @@
 import React from 'react';
 import './index.scss';
 import appTrueShopImage from '../../../../assets/images/LandingPage/phone-app-true-shop.png';
+import { useTranslation } from 'react-i18next';
+
 const AboutUs = () => {
+	const { t } = useTranslation();
 	return (
 		<div className="wrapper-about-us" id="about-us">
 			<div className="image-app-true-shop">
 				<img src={appTrueShopImage} alt="appTrueShopImage" />
 			</div>
 			<div className="description-app-true-shop">
-				<span className="subtitle">SORT ABOUT US</span>
+				<span className="subtitle">{t('_sort_about_us')}</span>
 				<h1>
 					We are <span>Genius Coursework</span> since 1980.
 				</h1>
@@ -29,9 +32,9 @@ const AboutUs = () => {
 					<li>Our Mission Increasing Global Access To Quality Aducation</li>
 					<li>100K Online Available Courses</li>
 				</ul>
-				<div className="btn btn-contact">
-					<a className="contact" href="#contact">Contact Us</a>
-				</div>
+				<a className="contact btn btn-contact" href="#contact">
+					{t('_contact_us')}
+				</a>
 			</div>
 		</div>
 	);

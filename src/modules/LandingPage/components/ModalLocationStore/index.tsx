@@ -3,9 +3,7 @@ import { ILandingPageProps } from '../../model/ILandingPageProps';
 //styles
 import './index.scss';
 //interface
-interface IProps extends ILandingPageProps {}
-
-const ModalLocationStore: React.FC<IProps> = (props) => {
+const ModalLocationStore: React.FC<ILandingPageProps> = (props) => {
 	const { toggleModalLocationStore } = props.store.LandingPage;
 
 	return (

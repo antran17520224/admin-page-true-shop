@@ -37,7 +37,8 @@
                     padding-bottom: 25px;
                     align-items: center;
 					.image-news {
-                        width: 100%;
+                        width: 40%;
+                        height: 130px;
                         img{
                             width: 100%;
                             margin: auto;
@@ -45,7 +46,7 @@
 					}
 					.details-news {
                         margin-left: 25px;
-                        max-width: 210px;
+                        width: 60%;
 						.title {
 							line-height: 22px;
 							height: 44px;
