@@ -4,16 +4,12 @@ import 'moment/locale/vi';
 import React from 'react';
 import { connect } from 'react-redux';
 import {
-	BrowserRouter as Router,
-	Redirect,
-	Route,
-	Switch,
+	BrowserRouter as Router
 } from 'react-router-dom';
 import { LoadingScreen } from './components';
 import LandingPage from './modules/LandingPage/components/LandingPageContainer';
 import { ILogInState } from './modules/LoginPage';
 import IStore from './redux/store/IStore';
-import { dashboardRoutes } from './routes';
 import './services/switchLanguage';
 interface IProps {
 	LoginState: ILogInState;

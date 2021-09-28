@@ -1,4 +1,5 @@
 @import '../../../../assets/styles/variables.scss';
+@import '../../../../assets/styles/media.scss';
 .wrapper-landing-page {
 	.wrapper-company {
 		padding: 100px 11%;
@@ -6,7 +7,7 @@
 		.headline {
 			font-size: 38px;
 			color: #333;
-			font-weight: 400;
+			font-weight: 700;
 			position: relative;
 			&::after {
 				position: absolute;
@@ -42,19 +43,67 @@
 			.next {
 				right: 30px;
 			}
-            .box-image-company{
-                text-align: center;
-                border-left: 1px solid #ccc;
-                border-right: 1px solid #ccc;
-                cursor: grabbing;
-                img{
-                    width: 170px;
-                    height: 98px;
-                    padding: 0px 20px;
-                  
-                  
+			.box-image-company {
+				text-align: center;
+				border-left: 1px solid #ccc;
+				border-right: 1px solid #ccc;
+				cursor: grabbing;
+				img {
+					width: 170px;
+					height: 98px;
+					padding: 0px 20px;
+				}
+			}
+		}
+	}
+}
+@include for-medium-desktop {
+	.wrapper-landing-page {
+		.wrapper-company {
+			padding: 100px 10%;
+		}
+	}
+}
+@include for-small-desktop {
+	.wrapper-landing-page {
+		.wrapper-company {
+			padding: 100px 4%;
+		}
+	}
+}
+@include for-tablet-landscape {
+	.wrapper-landing-page {
+		.wrapper-company {
+			padding: 100px 2%;
+			.headline {
+				font-size: 34px;
+			}
+		}
+	}
+}
+@include for-tablet-portrait {
+	.wrapper-landing-page {
+		.wrapper-company {
+			padding: 100px 4%;
+		}
+	}
+}
+@include for-phone-md-sm-screen {
+	.wrapper-landing-page {
+		.wrapper-company {
+			.headline {
+				font-size: 30px;
+			}
+			.wrapper-slider {
+				.arrow {
+					top: -130px;
+				}
+                .box-image-company{
+                    img{
+                        margin: auto;
+                    }
                 }
-            }
+			}
 		}
 	}
 }

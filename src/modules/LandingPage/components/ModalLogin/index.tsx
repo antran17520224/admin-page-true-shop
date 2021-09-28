@@ -1,4 +1,4 @@
-import { Button, Checkbox, Form, Input, Modal, Tabs } from 'antd';
+import { Modal, Tabs } from 'antd';
 import { useTranslation } from 'react-i18next';
 import smallLogo from '../../../../assets/images/logo/small-logo.png';
 import { ILandingPageProps } from '../../model/ILandingPageProps';
@@ -9,14 +9,13 @@ import './index.scss';
 
 const { TabPane } = Tabs;
 //interface
-interface IProps extends ILandingPageProps {}
 
-const ModalLogin: React.FC<IProps> = (props) => {
+const ModalLogin: React.FC<ILandingPageProps> = (props) => {
 	const { toggleModalLogin } = props.store.LandingPage;
 	const { t } = useTranslation();
 
 	function callback(key: string) {
-		console.log(key);
+		return key;
 	}
 	return (
 		<div className="wrapper-modal-login">
@@ -45,7 +44,7 @@ const ModalLogin: React.FC<IProps> = (props) => {
 							<TabPane tab={t('_login')} key="1">
 								<FormLogin />
 							</TabPane>
-							<TabPane tab={t('register')} key="2">
+							<TabPane tab={t('_register')} key="2">
 								<FormRegister />
 							</TabPane>
 						</Tabs>

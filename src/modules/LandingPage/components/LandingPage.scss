@@ -1,26 +1,119 @@
 @import '../../../assets/styles/variables.scss';
+@import '../../../assets/styles/media.scss';
 .wrapper-landing-page {
 	.subtitle {
-        color: #a9a3a3;
-        letter-spacing: 7px;
-        position: relative;
-        text-transform: uppercase;
-        &::before,
-        &::after {
-            content: '.';
-            font-size: 70px;
-            left: -45px;
-            pointer-events: none;
-            position: absolute;
-            text-shadow: rgba(0, 0, 0, 0%) 0px 0px;
-            top: -13px;
-            line-height: 0;
-            color: $main-color-true-shop;
-            text-shadow: 15px 0 $main-color-true-shop;
-        }
-        &::after {
-            right: -28px;
-            left: inherit;
-        }
-    }
+		color: #a9a3a3;
+		letter-spacing: 7px;
+		position: relative;
+		text-transform: uppercase;
+		&::before,
+		&::after {
+			content: '.';
+			font-size: 70px;
+			left: -45px;
+			pointer-events: none;
+			position: absolute;
+			text-shadow: rgba(0, 0, 0, 0%) 0px 0px;
+			top: -13px;
+			line-height: 0;
+			color: $main-color-true-shop;
+			text-shadow: 15px 0 $main-color-true-shop;
+		}
+		&::after {
+			right: -28px;
+			left: inherit;
+		}
+	}
+}
+.btn {
+	background: $main-color-true-shop;
+	background: -moz-linear-gradient(left, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
+	background: -webkit-gradient(
+		left top,
+		right top,
+		color-stop(0%, #4eb3bf),
+		color-stop(51%, $main-color-true-shop),
+		color-stop(100%, #4eb3bf)
+	);
+	background: -webkit-linear-gradient(left, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
+	background: -o-linear-gradient(left, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
+	background: -ms-linear-gradient(left, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
+	background: linear-gradient(to right, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
+	background-size: 200% auto;
+	-webkit-transition: background 1s ease-out;
+	-moz-transition: background 1s ease-out;
+	-o-transition: background 1s ease-out;
+	transition: background 1s ease-out;
+	height: 50px;
+	line-height: 52px;
+	border-radius: 4px;
+	display: table;
+	padding: 0px 25px;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+}
+.navbar-brand {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	margin-right: 30px;
+
+	.logo {
+		width: 50px;
+		height: 50px;
+		margin-right: 10px;
+		img {
+			height: 100%;
+		}
+	}
+	.brand {
+		.name-brand {
+			font-size: 25px;
+			font-weight: 800;
+			span {
+				font-weight: 100;
+				color: #ccc;
+			}
+		}
+		.link-website {
+			font-size: 15px;
+		}
+	}
+}
+
+@include for-tablet-portrait {
+	.wrapper-landing-page {
+		.subtitle {
+			font-size: 14px;
+			&::before,
+			&::after {
+				top: -15px;
+			}
+		}
+	}
+}
+@include for-phone-big-screen {
+	.wrapper-landing-page {
+		.subtitle {
+			font-size: 10px;
+			&::before,
+			&::after {
+				top: -16px;
+				font-size: 60px;
+			}
+		}
+	}
+}
+@include for-phone-md-sm-screen {
+	.wrapper-landing-page {
+		.subtitle {
+			font-size: 13px;
+			&::before,
+			&::after {
+				top: -16px;
+				font-size: 60px;
+			}
+		}
+	}
 }

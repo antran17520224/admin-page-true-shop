@@ -1,20 +1,16 @@
 @import '../../../../assets/styles/variables.scss';
+@import '../../../../assets/styles/media.scss';
 .wrapper-landing-page {
 	.wrapper-about-us {
 		background-color: #f7f7f7;
-		display: flex;
-		padding: 150px 9%;
+		padding: 150px 11%;
 		.image-app-true-shop {
-			width: 41%;
-			padding: 0px 20px;
 			img {
 				width: 350px;
 				height: 100%;
 			}
 		}
 		.description-app-true-shop {
-			width: 59%;
-			padding: 0px 20px;
 			color: #333;
 			.subtitle {
 				margin-left: 42px;
@@ -71,41 +67,104 @@
 					}
 				}
 			}
-            .btn-contact{
-                margin-top: 65px;
-            }
-			.btn {
-				background: $main-color-true-shop;
-				background: -moz-linear-gradient(left, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
-				background: -webkit-gradient(
-					left top,
-					right top,
-					color-stop(0%, #4eb3bf),
-					color-stop(51%, $main-color-true-shop),
-					color-stop(100%, #4eb3bf)
-				);
-				background: -webkit-linear-gradient(left, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
-				background: -o-linear-gradient(left, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
-				background: -ms-linear-gradient(left, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
-				background: linear-gradient(to right, #fba33b 0%, $main-color-true-shop 51%, #fba33b 100%);
-				background-size: 200% auto;
-				-webkit-transition: background 1s ease-out;
-				-moz-transition: background 1s ease-out;
-				-o-transition: background 1s ease-out;
-				transition: background 1s ease-out;
-				height: 50px;
-				line-height: 52px;
-				border-radius: 4px;
-				display: table;
-				padding: 0px 25px;
-				text-transform: uppercase;
-				font-weight: 700;
-				text-align: center;
-				
+			.btn-contact {
+				margin-top: 65px;
 			}
-            .contact {
-                color: #fff;
-            }
+
+			.contact {
+				color: #fff;
+			}
+		}
+	}
+}
+@include for-medium-desktop {
+	.wrapper-landing-page {
+		.wrapper-about-us {
+			padding: 150px 10%;
+		}
+	}
+}
+@include for-small-desktop {
+	.wrapper-landing-page {
+		.wrapper-about-us {
+			padding: 150px 4%;
+			.description-app-true-shop {
+				h1 {
+					font-size: 50px;
+				}
+			}
+		}
+	}
+}
+@include for-tablet-landscape {
+	.wrapper-landing-page {
+		.wrapper-about-us {
+			background-color: #f7f7f7;
+			padding: 150px 2%;
+			.image-app-true-shop {
+				img {
+					width: 300px;
+				}
+			}
+			.description-app-true-shop {
+				h1 {
+					font-size: 48px;
+					font-weight: 300;
+					color: #333;
+					span {
+						font-weight: 700;
+					}
+				}
+				h5 {
+					font-size: 19px;
+				}
+				p {
+					font-size: 15px;
+					color: #333;
+					margin-top: 60px;
+				}
+			}
+		}
+	}
+}
+@include for-tablet-portrait {
+	.wrapper-landing-page {
+		.wrapper-about-us {
+			background-color: #f7f7f7;
+			padding: 150px 4%;
+			.description-app-true-shop {
+				h1 {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+}
+@include for-phone-md-sm-screen {
+	.wrapper-landing-page {
+		.wrapper-about-us {
+			.description-app-true-shop {
+				text-align: center;
+				.subtitle {
+					margin-left: 0px;
+				}
+                h1{
+                    font-size: 35px;
+                }
+                h5{
+                    font-size: 17px;
+                    &::after{
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+                ul {
+                    li{
+                        text-align: start;
+                        font-size: 14px;
+                    }
+                }
+			}
 		}
 	}
 }

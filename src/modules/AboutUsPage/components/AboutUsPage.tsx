@@ -5,7 +5,7 @@ import AboutUsInfoUpdateForm from './Form';
 
 interface IProps extends RouteComponentProps, IAboutUsProps {}
 
-const AboutUsPage: React.FC<IProps> = (props) => {
+const AboutUsPage: React.FC<IProps> = () => {
 
 	return (
 		<React.Fragment>

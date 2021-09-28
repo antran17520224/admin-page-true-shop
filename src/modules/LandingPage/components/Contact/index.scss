@@ -1,17 +1,16 @@
 @import '../../../../assets/styles/variables.scss';
+@import '../../../../assets/styles/media.scss';
 .wrapper-landing-page {
 	.wrapper-contact {
 		background-color: $main-color-true-shop;
-		padding: 100px 9%;
+		padding: 100px 11%;
 		display: flex;
 		flex-wrap: nowrap;
 		.wrapper-info-true-shop {
 			color: #fff;
-			width: 50%;
-			padding: 0px 20px;
+            padding-right: 40px;
 			.subtitle {
 				color: rgb(223, 223, 223);
-
 				margin-left: 50px;
 				&::after,
 				&::before {
@@ -73,8 +72,6 @@
 			}
 		}
 		.wrapper-maps {
-			width: 50%;
-			padding: 0px 20px;
 			position: relative;
 			.maps {
 				top: 0;
@@ -85,6 +82,96 @@
 				iframe {
 					border-radius: 5px;
 				}
+			}
+		}
+	}
+}
+@include for-medium-desktop {
+	.wrapper-landing-page {
+		.wrapper-contact {
+			padding: 100px 10%;
+		}
+	}
+}
+@include for-small-desktop {
+	.wrapper-landing-page {
+		.wrapper-contact {
+			padding: 100px 4%;
+			.wrapper-info-true-shop {
+				h3 {
+					font-size: 50px;
+				}
+			}
+		}
+	}
+}
+@include for-tablet-landscape {
+	.wrapper-landing-page {
+		.wrapper-contact {
+			padding: 100px 2%;
+			.wrapper-info-true-shop {
+                padding-right: 0px;
+				h3 {
+					font-size: 40px;
+				}
+				.box-info {
+					.details-info {
+						.details {
+							p {
+								font-size: 16px;
+							}
+						}
+					}
+				}
+			}
+			.wrapper-maps {
+				.maps {
+					width: 49vw;
+				}
+			}
+		}
+	}
+}
+@include for-tablet-portrait {
+	.wrapper-landing-page {
+		.wrapper-contact {
+			padding: 100px 4%;
+			.wrapper-maps {
+				height: 300px;
+				.maps {
+					width: 90vw;
+				}
+			}
+			.wrapper-info-true-shop {
+				h3 {
+				}
+				.description {
+					margin-top: 33px;
+				}
+			}
+		}
+	}
+}
+@include for-phone-md-sm-screen{
+    .wrapper-landing-page {
+		.wrapper-contact {
+			.wrapper-info-true-shop {
+				h3 {
+                    font-size: 30px;
+				}
+                .box-info{
+                    .details-info{
+                        .icon{
+                            margin-right: 0px;
+                        }
+                        .details{
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+				
 			}
 		}
 	}

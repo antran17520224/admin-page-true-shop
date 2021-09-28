@@ -1,20 +1,16 @@
 @import '../../../../assets/styles/variables.scss';
+@import '../../../../assets/styles/media.scss';
 .wrapper-landing-page {
 	.wrapper-list-businesses {
 		background-color: #fff;
-		padding: 100px 9%;
-		display: flex;
-		flex-direction: row;
+		padding: 100px 11%;
 		.subtitle {
-			margin-left: 56px;
+			margin-left: 46px;
 		}
 		.list-businesses {
-			width: 75%;
-			padding: 0px 13px;
 			height: min-content;
 			.tools-box {
 				font-size: 16px;
-				padding-left: 15px;
 				margin-bottom: 15px;
 				margin-top: 40px;
                 display: flex;
@@ -70,11 +66,7 @@
 				}
 			}
 			.list {
-				// display: flex;
-				// flex-wrap: wrap;
 				.wrapper-item {
-					padding: 15px;
-					// width: 33%;
 					.item {
 						background: #f1f1f3;
 						border-radius: 4px;
@@ -86,7 +78,7 @@
 							height: 160px;
 							text-align: center;
 							img {
-								width: 70%;
+                                height: 100%;
 								margin: auto;
 							}
 						}
@@ -208,15 +200,13 @@
 		}
 		.category {
 			margin-top: 66px;
-			padding: 0px 20px;
-			width: 25%;
 			.title {
 				font-size: 30px;
 				line-height: 36px;
 				font-weight: 700;
 			}
 			ul {
-				margin-top: 30px;
+				margin-top: 15px;
 				li {
 					background-color: #f7f7f7;
 					position: relative;
@@ -254,4 +244,52 @@
 			}
 		}
 	}
+}
+@include for-medium-desktop {
+    .wrapper-landing-page{
+        .wrapper-list-businesses{
+            padding: 100px 10%;
+        }
+
+    }
+}
+@include for-small-desktop {
+    .wrapper-landing-page{
+        .wrapper-list-businesses{
+            padding: 100px 4%;
+            .list-businesses{
+                .list{
+                    .wrapper-item{
+                        .item{
+                            .image-item{
+                                height: 140px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+@include for-tablet-landscape{
+    .wrapper-landing-page{
+        .wrapper-list-businesses{
+            padding: 100px 2%;
+            
+        }
+
+    }
+}
+@include for-tablet-portrait {
+	.wrapper-landing-page{
+        .wrapper-list-businesses{
+            padding: 100px 4%;
+            
+        }
+
+    }
+}
+@include for-phone-md-sm-screen {
+	
 }

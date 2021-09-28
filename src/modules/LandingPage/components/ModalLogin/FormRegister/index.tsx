@@ -6,7 +6,7 @@ const { Option } = Select;
 const FormRegister = () => {
 	const { t } = useTranslation();
 	const onFinish = (data: any) => {
-		return null;
+		return data;
 	};
 	const prefixSelector = (
 		<Form.Item name="prefix" noStyle initialValue="+84">

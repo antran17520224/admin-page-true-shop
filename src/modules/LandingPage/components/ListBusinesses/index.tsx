@@ -29,7 +29,7 @@ const ListBusinesses: React.FC<ILandingPageProps> = (props) => {
 	const renderShop = (arrayShops: string[]) => {
 		return arrayShops.map((shop, index) => {
 			return (
-				<Col xl={8} className="wrapper-item">
+				<Col key={index} xl={8} lg={8} md={24} sm={24} xs={24}  className="wrapper-item justify-content-center">
 					<div className="item">
 						<div className="image-item">
 							<img src={shop} alt="shop1" />
@@ -49,12 +49,12 @@ const ListBusinesses: React.FC<ILandingPageProps> = (props) => {
 		});
 	};
 	const onSearch = (value: any) => {
-		console.log(value);
+		return value;
 	};
 	return (
-		<>
-			<div className="wrapper-list-businesses" id="list-businesses">
-				<div className="list-businesses">
+		<div className="wrapper-list-businesses" id="list-businesses">
+			<Row id="list-businesses" gutter={32}>
+				<Col className="list-businesses" xxl={18} xl={18} lg={18} md={24} sm={24} xs={24}>
 					<span className="subtitle">Danh sách cửa hàng</span>
 
 					<div className="tools-box">
@@ -68,13 +68,18 @@ const ListBusinesses: React.FC<ILandingPageProps> = (props) => {
 								</a>
 							</Dropdown>
 						</div>
-						<div className="search-box">
-							<Search placeholder="search..." onSearch={onSearch} enterButton  />
-						</div>
 					</div>
-					<Row className="list">{renderShop(arrayShops)}</Row>
-				</div>
-				<div className="category">
+					<Row
+						gutter={[
+							{ lg: 24, md: 24, sm: 16, xs: 8 },
+							{ lg: 24, md: 24, sm: 16, xs: 8 },
+						]}
+						className="list"
+					>
+						{renderShop(arrayShops)}
+					</Row>
+				</Col>
+				<Col className="category" xxl={6} xl={6} lg={6} md={24} sm={24} xs={24}>
 					<span className="title">Categories.</span>
 					<Menu defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} mode="inline">
 						<Menu.Item key="1" icon={<i className="fas fa-chevron-right"></i>}>
@@ -96,9 +101,9 @@ const ListBusinesses: React.FC<ILandingPageProps> = (props) => {
 							Lorem, ipsum dolor.
 						</Menu.Item>
 					</Menu>
-				</div>
-			</div>
-		</>
+				</Col>
+			</Row>
+		</div>
 	);
 };
 

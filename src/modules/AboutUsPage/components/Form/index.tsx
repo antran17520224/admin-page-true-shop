@@ -8,7 +8,7 @@ const AboutUsInfoUpdateForm = () => {
 	const [formInstance] = Form.useForm();
 
 	const onFinish = (data: IInputs) => {
-		return null;
+		return data;
 	};
 
 	return (

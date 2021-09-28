@@ -11,11 +11,12 @@ import { ILandingPageProps } from '../../model/ILandingPageProps';
 //styles
 import './index.scss';
 //interface
-interface IProps extends ILandingPageProps {}
+// interface IProps extends ILandingPageProps {}
 
-const Header: React.FC<IProps> = (props) => {
+const Header: React.FC<ILandingPageProps> = (props) => {
 	const [triggerScroll, setTriggerScroll] = useState<boolean>(false);
 	const [openSearchBox, setOpenSearchBox] = useState<boolean>(false);
+	const [toggleMobileMenu, setToggleMobileMenu] = useState<boolean>(false);
 	const { currentLanguage } = props.store.LandingPage;
 	const prevScrollY = useRef(0);
 	useEffect(() => {
@@ -38,7 +39,7 @@ const Header: React.FC<IProps> = (props) => {
 	const { t } = useTranslation();
 	const handleChangeLanguage = (str: string) => {
 		i18next.changeLanguage(str);
-		props.actions.selectLanguage(str)
+		props.actions.selectLanguage(str);
 	};
 
 	const menuLang = (
@@ -58,7 +59,7 @@ const Header: React.FC<IProps> = (props) => {
 	return (
 		<div className="wrapper-header">
 			<header className={cls('d-flex align-items-center', triggerScroll ? 'header-scroll' : 'header')}>
-				<div className="navbar-header">
+				<div className="navbar-brand">
 					<div className="logo">
 						<img src={smallLogo} alt="logo TrueShop" />
 					</div>
@@ -81,7 +82,7 @@ const Header: React.FC<IProps> = (props) => {
 						</a>
 					</Dropdown>
 				</div>
-				<div className="navbar-menu">
+				<div className="navbar-menu menu-text">
 					<ul>
 						<li>
 							<a href="#">{t('_home')}</a>
@@ -101,27 +102,45 @@ const Header: React.FC<IProps> = (props) => {
 						<li>
 							<a href="#contact">{t('_contact')}</a>
 						</li>
-						<li className="search-icon">
-							<i className="fas fa-search" onClick={() => setOpenSearchBox(!openSearchBox)}></i>
-							<div className={cls('search-body', openSearchBox && 'search-open')}>
-								<div className="search-form">
-									<form action="">
-										<input className="search-input" placeholder="Tìm kiếm..." type="search" />
-										<span className="close-form">
-											<i className="fas fa-times" onClick={() => setOpenSearchBox(false)}></i>
-										</span>
-									</form>
-								</div>
-							</div>
-						</li>
-						<li onClick={() => props.actions.toggleModalLogin()}>
-							<i className="fas fa-user"></i>
-						</li>
 					</ul>
 				</div>
-
-				<div className="mobile-menu"></div>
+				<ul className="navbar-menu menu-icon d-flex">
+					<li className="search-icon">
+						<i className="fas fa-search" onClick={() => setOpenSearchBox(!openSearchBox)}></i>
+						<div className={cls('search-body', openSearchBox && 'search-open')}>
+							<div className="search-form">
+								<form action="">
+									<input className="search-input" placeholder="Tìm kiếm..." type="search" />
+									<span className="close-form">
+										<i className="fas fa-times" onClick={() => setOpenSearchBox(false)}></i>
+									</span>
+								</form>
+							</div>
+						</div>
+					</li>
+					<li onClick={() => props.actions.toggleModalLogin()}>
+						<i className="fas fa-user"></i>
+					</li>
+				</ul>
+				<div
+					className={cls('icon-mobile-menu', toggleMobileMenu && 'toggle')}
+					onClick={() => setToggleMobileMenu(!toggleMobileMenu)}
+				>
+					<div id="icon-expand">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
 			</header>
+			<ul className={cls('mobile-menu', toggleMobileMenu && 'mobile-menu-show')}>
+				<a href="#">{t('_home')}</a>
+				<a href="#about-us">{t('_about_us')}</a>
+				<a href="#list-businesses">{t('_shop')}</a>
+				<a href="#news">{t('_news')}</a>
+				<a href="#company">{t('_company')}</a>
+				<a href="#contact">{t('_contact')}</a>
+			</ul>
 		</div>
 	);
 };

@@ -12,9 +12,9 @@ import ModalLocationStore from './ModalLocationStore';
 import ModalLogin from './ModalLogin';
 import News from './News';
 
-interface IProps extends ILandingPageProps {}
+// interface IProps extends ILandingPageProps {}
 
-const LandingPage: React.FC<IProps> = (props) => {
+const LandingPage: React.FC<ILandingPageProps> = (props) => {
 	const { currentLanguage } = props.store.LandingPage;
 
 	useEffect(() => {

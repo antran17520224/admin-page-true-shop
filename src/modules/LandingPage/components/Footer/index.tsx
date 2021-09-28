@@ -6,9 +6,9 @@ const Footer = () => {
 	const { t } = useTranslation();
 	return (
 		<div className="wrapper-footer">
-			<Row gutter={[48,8]} justify="space-between">
-				<Col className="gutter-row footer-about" xl={6} >
-					<div className="navbar-header">
+			<Row gutter={[48, 8]} justify="space-between" className="w-100">
+				<Col className="gutter-row footer-about" xl={6} xxl={6} lg={6} md={8} sm={24} xs={24}>
+					<div className="navbar-brand">
 						<div className="logo">
 							<img src={smallLogo} alt="logo TrueShop" />
 						</div>
@@ -28,14 +28,15 @@ const Footer = () => {
 						obcaecati quod enim quibusdam expedita dicta totam velit?
 					</p>
 				</Col>
-				<Col className="gutter-row middle-col" xl={10}  >
-					<Row justify="center">
-						<Col span={12} className="col-useful">
+				<Col className="gutter-row middle-col" xl={10} xxl={10} lg={10} md={8} sm={24} xs={24}>
+					<Row justify="center" gutter={[{},{md: 24,sm:24,xs:24}]}>
+						<Col xl={12} xxl={12} lg={12} md={24} sm={12} xs={24} className="col-useful">
 							<h4 className="headline">{t('_useful_link')}</h4>
 							<ul>
 								<li>
 									<a href="#">
-										<i className="fas fa-caret-right"></i>{t('_home')}
+										<i className="fas fa-caret-right"></i>
+										{t('_home')}
 									</a>
 								</li>
 								<li>
@@ -70,7 +71,7 @@ const Footer = () => {
 								</li>
 							</ul>
 						</Col>
-						<Col span={12} className="col-account-info">
+						<Col xl={12} xxl={12} lg={12} md={24} sm={12} xs={24} className="col-account-info">
 							<h4 className="headline">{t('_account_info')}</h4>
 							<ul>
 								<li>
@@ -107,7 +108,7 @@ const Footer = () => {
 						</Col>
 					</Row>
 				</Col>
-				<Col className="gutter-row" xl={7}  >
+				<Col className="gutter-row" xl={7} xxl={7} lg={8} md={8} sm={24} xs={24}>
 					<h4 className="headline">{t('_quick_contact')}</h4>
 					<ul>
 						<li>
@@ -136,12 +137,22 @@ const Footer = () => {
 			</Row>
 			<div className="copy-right-menu">
 				<p>
-					© 2021 - Designed & Developed by <span><a href="#">TrueShop</a></span>. All rights reserved
+					© 2021 - Designed & Developed by{' '}
+					<span>
+						<a href="#">TrueShop</a>
+					</span>
+					. All rights reserved
 				</p>
 				<ul className="copy-right-menu-item">
-					<li><a href="#">License</a></li>
-					<li><a href="#">Privacy & Policy</a></li>
-					<li><a href="#">Term Of Service</a></li>
+					<li>
+						<a href="#">License</a>
+					</li>
+					<li>
+						<a href="#">Privacy & Policy</a>
+					</li>
+					<li>
+						<a href="#">Term Of Service</a>
+					</li>
 				</ul>
 			</div>
 		</div>
